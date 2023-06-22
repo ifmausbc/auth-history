@@ -8,6 +8,7 @@
 
 <body>
 <?php
+// セッションの宣言
 session_start();
 header('Content-Type:text/html; charset=UTF-8');
 
@@ -54,7 +55,7 @@ try{
 }
 // ログインフォームで入力されたパスワードをハッシュ値同士でDBに格納されているパスワードと比較
 if(password_verify($ppassword, $result['ppassword'])) {
-    
+    // セッション変数にuserIDを引き渡して
     $_SESSION['userID'] = $result['userID']; //ログイン成功時
     // マイページに遷移
     header('Location: ../my.php');
