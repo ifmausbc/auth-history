@@ -243,7 +243,9 @@ if (($railwaycompanyb == "JR九州" && $railwaycompanyg == "JR九州") ||
     <p><?php echo $boarding; ?>駅
 
         から<?php echo $getoff; ?>駅
-        <?php /* if($dist >= 201 && $tokug != "") {
+        <?php 
+        // 特定都区市内における特例処理
+        /* if($dist >= 201 && $tokug != "") {
                 echo " ";
                 echo $tokug;
                 echo " ";
